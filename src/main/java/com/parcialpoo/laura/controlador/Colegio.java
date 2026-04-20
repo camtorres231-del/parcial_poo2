@@ -31,6 +31,7 @@ public class Colegio {
     public List<Profesor> getProfesoresOrdenados() {
         profesores.sort((a, b) -> Double.compare(b.calcularSalario(), a.calcularSalario()));
         return profesores;
+        // Ordenamiento de profesores por salario de mayor a menor
     }
 
     public double getTotalPrestaciones() {
