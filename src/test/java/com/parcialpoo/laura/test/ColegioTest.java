@@ -1,4 +1,5 @@
 package com.parcialpoo.laura.test;
+// Pruebas unitarias de la clase Colegio
 
 import com.parcialpoo.laura.controlador.Colegio;
 import com.parcialpoo.laura.modelo.*;
