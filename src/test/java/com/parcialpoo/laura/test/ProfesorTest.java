@@ -1,5 +1,5 @@
 package com.parcialpoo.laura.test;
-
+// Pruebas de integración para Profesor
 import com.parcialpoo.laura.modelo.Profesor;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
