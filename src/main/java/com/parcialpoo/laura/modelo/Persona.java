@@ -1,4 +1,5 @@
 package com.parcialpoo.laura.modelo;
+// Clase base Persona
 
 public class Persona {
     private String nombre, direccion, telefono, fechaNacimiento;
@@ -10,6 +11,9 @@ public class Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+    public String mostrarDatos() {
+    return nombre;
+}
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
