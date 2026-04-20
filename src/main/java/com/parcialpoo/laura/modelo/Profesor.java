@@ -49,6 +49,7 @@ public String mostrarDatos() {
 
     public double calcularPrestaciones() {
         return calcularSalario() * 0.19;
+        // Cálculo de prestaciones sociales (19%)
     }
     
     public String getCedula() {
