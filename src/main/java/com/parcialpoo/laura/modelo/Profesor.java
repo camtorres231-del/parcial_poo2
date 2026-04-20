@@ -45,6 +45,7 @@ public String mostrarDatos() {
     
     public double calcularSalario(int horasExtra) {
     return calcularSalario() + (horasExtra * salarioHora);
+    // Aplicación de polimorfismo (sobrescritura y sobrecarga)
 }
 
     public double calcularPrestaciones() {
