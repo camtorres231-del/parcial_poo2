@@ -38,6 +38,7 @@ public class Colegio {
         double total = 0;
         for (Profesor p : profesores) {
             total += p.calcularPrestaciones();
+            // Cálculo del total de prestaciones sociales
         }
         return total;
     }
