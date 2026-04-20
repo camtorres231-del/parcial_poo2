@@ -1,11 +1,20 @@
 package com.parcialpoo.laura.controlador;
+// Gestión de listas de estudiantes y profesores
 
-import java.util.*;
-import com.parcialpoo.laura.modelo.*;
+import java.util.ArrayList;
+import java.util.List;
+import com.parcialpoo.laura.modelo.Estudiante;
+import com.parcialpoo.laura.modelo.Profesor;
 
 public class Colegio {
-    private List<Profesor> profesores = new ArrayList<>();
-    private List<Estudiante> estudiantes = new ArrayList<>();
+
+    private List<Profesor> profesores;
+    private List<Estudiante> estudiantes;
+
+    public Colegio() {
+        profesores = new ArrayList<>();
+        estudiantes = new ArrayList<>();
+    }
 
     public void agregarProfesor(Profesor p) {
         profesores.add(p);
@@ -15,22 +24,20 @@ public class Colegio {
         estudiantes.add(e);
     }
 
-    public void reporteEstudiantes() {
-        for (Estudiante e : estudiantes) {
-            System.out.println(e.getNombre());
-        }
+    public List<Estudiante> getEstudiantes() {
+        return estudiantes;
     }
 
-    public void reporteProfesores() {
-        profesores.sort((a,b) -> Double.compare(b.calcularSalario(), a.calcularSalario()));
+    public List<Profesor> getProfesoresOrdenados() {
+        profesores.sort((a, b) -> Double.compare(b.calcularSalario(), a.calcularSalario()));
+        return profesores;
+    }
 
-        double totalPrestaciones = 0;
-
+    public double getTotalPrestaciones() {
+        double total = 0;
         for (Profesor p : profesores) {
-            System.out.println(p.getNombre() + " - Salario: " + p.calcularSalario());
-            totalPrestaciones += p.calcularPrestaciones();
+            total += p.calcularPrestaciones();
         }
-
-        System.out.println("Total prestaciones: " + totalPrestaciones);
+        return total;
     }
 }
