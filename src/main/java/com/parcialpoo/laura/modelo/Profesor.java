@@ -40,6 +40,7 @@ public String mostrarDatos() {
     public double calcularSalario() {
         double base = salarioHora * horasMes;
         return base + (base * 0.30);
+        // Cálculo de salario con 30% adicional por preparación
     }
     
     public double calcularSalario(int horasExtra) {
